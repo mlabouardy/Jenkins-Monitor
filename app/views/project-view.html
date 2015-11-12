@@ -1,0 +1,61 @@
+<div class="row">
+<div class="col-md-12">
+	<div class="panel panel-primary">
+	  <div class="panel-heading">Information <a class="btn btn-warning btn-xs">Unstable</a> <a class="btn btn-success btn-xs" href="{{builds.url}}">Open</a></div>
+	  <div class="panel-body">
+	    <h5>{{builds.displayName}}</h5>
+	    <small>{{builds.description}}</small>
+	  </div>
+</div>
+</div>
+<div class="col-md-4">
+<table class="table table-bordered">
+	<thead>
+		<th>Number</th>
+		<th>Operation</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="build in builds.builds">
+			<td>{{build.number}}</td>
+			<td><a class="btn btn-primary btn-xs" href="{{build.url}}">View</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="col-md-4">
+	<ul class="list-group">
+	  <li class="list-group-item">
+	    <span class="badge">{{builds.lastBuild.number}}</span>
+	    Last build
+	  </li>
+	  <li class="list-group-item">
+	    <span class="badge">{{builds.lastCompletedBuild.number}}</span>
+	    Last completed build
+	  </li>
+	  <li class="list-group-item">
+	    <span class="badge">{{builds.lastFailedBuild.number}}</span>
+	    Last failed build
+	  </li>
+	  <li class="list-group-item">
+	    <span class="badge">{{builds.lastCompletedBuild.number}}</span>
+	    Last completed build
+	  </li>
+	  <li class="list-group-item">
+	    <span class="badge">{{builds.lastStableBuild.number}}</span>
+	    Last stable build
+	  </li>
+	   <li class="list-group-item">
+	    <span class="badge">{{builds.lastSuccessfulBuild.number}}</span>
+	    Last successful build
+	  </li>
+	   <li class="list-group-item">
+	    <span class="badge">{{builds.lastUnstableBuild.number}}</span>
+	    Last unstable build
+	  </li>
+	   <li class="list-group-item">
+	    <span class="badge">{{builds.lastUnsuccessfulBuild.number}}</span>
+	    Last unsuccessful build
+	  </li>
+	</ul>
+</div>
+</div>

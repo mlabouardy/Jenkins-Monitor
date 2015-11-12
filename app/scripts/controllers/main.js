@@ -8,10 +8,8 @@
  * Controller of the jenkinsMonitorApp
  */
 angular.module('jenkinsMonitorApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $location) {
+   	$scope.login=function(){
+   		$location.path('/projects');
+   	};
   });
